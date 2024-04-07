@@ -1,3 +1,4 @@
+import time
 from interfaces.dao import InterfaceDAO
 
 class MySQLRepository(InterfaceDAO):
@@ -8,8 +9,10 @@ class MySQLRepository(InterfaceDAO):
 
     def get_session(self, entity):
         print('Connecting to yourDB...')
+        time.sleep(0.5)
         print('Connected to DB...')
-        return 'Information of entity'
+        time.sleep(0.3)
+        return entity
 
     def close_connection(self):
         print('DB closed. Bye!')
