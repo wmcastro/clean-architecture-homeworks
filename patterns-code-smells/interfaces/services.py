@@ -1,7 +1,6 @@
-class Entity:
-    def __init__(self, connection, entity) -> None:
-        self.entity = entity
-        self.session = connection.get_session()
+from abc import ABC, abstractmethod
 
+class InterfaceService(ABC):
+    @abstractmethod
     def get_entity(self):
-        raise NotImplementedError("Only allowed on child classes.")
+        pass
