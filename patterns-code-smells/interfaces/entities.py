@@ -1,8 +1,7 @@
-# TODO: FIX THIS
+from abc import ABC, abstractmethod
 
-class UserInterface:
-    def __init__(self, name, age, email, country):
-        self.name = name
-        self.age = age
-        self.email = email
-        self.country = country
+class InterfaceEntity(ABC):
+
+    @abstractmethod
+    def __init__(self):
+        pass
